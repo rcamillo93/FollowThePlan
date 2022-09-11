@@ -42,5 +42,25 @@ namespace FollowThePlan.Api.Repositories
 
             return query.FirstOrDefault();
         }
+
+
+        public Personal[] GetAllClientesByPersonalId(int personalId)
+        {
+            // pega todos alunos
+            IQueryable<Personal> query = _context.Personais;
+
+            //if (includeProfessor)
+            //{
+            //    query = query.Include(a => a.AlunoDisciplinas) // o ThenInclude será um inner join
+            //                  .ThenInclude(ad => ad.Disciplina)
+            //                  .ThenInclude(d => d.Professor);
+            //}
+
+            query = query.AsNoTracking()
+                        .OrderBy(p => p.Id)
+                        .Where(personal => personal.PersonalClientes.Any(pc => pc.IdPersonal == personalId));
+
+            return query.ToArray();
+        }
     }
 }

@@ -12,7 +12,7 @@ using static FollowThePlan.Api.Repositories.ClienteRepository;
 namespace FollowThePlan.Api.Controllers
 {
     [ApiController]
-    [ApiVersion("2.0")]
+    [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     public class ClienteController : ControllerBase
     {

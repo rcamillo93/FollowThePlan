@@ -21,6 +21,8 @@ namespace FollowThePlan.Api.Model
         public DateTime? ValidadeHash { get; set; } = null;
         public int IdCidade { get; set; } = 0;
 
+        public IEnumerable<PersonalCliente> PersonalClientes { get; set; }
+
         public Personal()
         {
 

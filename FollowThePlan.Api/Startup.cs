@@ -47,6 +47,9 @@ namespace FollowThePlan.Api
             services.AddScoped<IPersonalRepository, PersonalRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<IObjetivoRepository, ObjetivoRepository>();
+            services.AddScoped<IPlanoRepository, PlanoRepository>();
+            services.AddScoped<IAlimentoRepository, AlimentoRepository>();
+            services.AddScoped<IRefeicaoRepository, RefeicaoRepository>();
 
             services.AddVersionedApiExplorer(options =>
             {

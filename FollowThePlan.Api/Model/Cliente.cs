@@ -29,7 +29,6 @@ namespace FollowThePlan.Api.Model
         {
 
         }
-
         public Cliente(int id, string nome, string email, string senha, double peso, double altura, double basal, double gastoAtividades, DateTime dataNascimento, string celular, int idCidade)
         {
             Id = id;

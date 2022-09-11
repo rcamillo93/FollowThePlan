@@ -119,5 +119,6 @@ namespace FollowThePlan.Api.Controllers
 
             return BadRequest("Personal não deletado");
         }
+
     }
 }

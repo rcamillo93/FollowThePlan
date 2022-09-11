@@ -69,7 +69,6 @@ namespace FollowThePlan.Api.Controllers
 
             _mapper.Map(model, objetivo);
 
-
             _repo.Update(objetivo);
 
             if (_repo.SaveChanges())
